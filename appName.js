@@ -1,1 +1,4 @@
-angular.module("appName", []);
+angular.module("appName", [])
+    .controller("nameOfController", function($scope) {
+    	
+    });
