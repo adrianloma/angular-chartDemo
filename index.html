@@ -11,13 +11,13 @@
 
 <body >
 
-	<div ng-controller="nameOfController as myController">
-		<canvas id="radar" class="chart chart-radar"
-			chart-data="myController.data" chart-labels="myController.labels">
-		</canvas>
-		<p> Charts are reactive and update automatically when data changes.</p>
-		<button  ng-click="myController.randomize()">Randomize</button>
-	</div>
+<div ng-controller="nameOfController as myController">
+    <canvas id="base" class="chart-base" chart-type="myController.type"
+      chart-data="myController.data" chart-labels="myController.labels" chart-legend="true">
+    </canvas>
+    <button ng-click="myController.toggle()"> Toggle chart </button>
+	<button  ng-click="myController.randomize()">Randomize data</button>
+</div>
 
 </body>
 </html>
