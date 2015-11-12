@@ -15,6 +15,10 @@
 		<button ng-click="myController.clear()">Clear</button>
     </p>
 
-
+      <ul>
+        <li ng-repeat="singleMessage in myController.messages">
+          {{singleMessage.text}}
+        </li>
+      </ul>
 </body>
 </html>

@@ -3,8 +3,11 @@ angular.module("appName", [])
 		var controllerScope = this;
 		controllerScope.message = "";
 
+		controllerScope.messages = [];
+
         controllerScope.save = function() {
-            alert("Note Saved");
+            controllerScope.messages.push( {text:controllerScope.message});
+            controllerScope.clear();
         };
         controllerScope.clear = function() {
             controllerScope.message = "";
