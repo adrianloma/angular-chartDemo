@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="appName">
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
 	<script src="appName.js"></script>
@@ -7,12 +7,12 @@
 
 <body ng-controller="nameOfController as myController">
 
-	<textarea ng-model="message" cols="80" rows="20"></textarea>
+	<textarea ng-model="myController.message" cols="80" rows="20"></textarea>
 
 
     <p align="center">
-        <button>Save</button>
-        <button>Clear</button>
+		<button ng-click="myController.save()">Save</button>
+		<button ng-click="myController.clear()">Clear</button>
     </p>
 
 

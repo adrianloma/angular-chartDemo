@@ -1,7 +1,14 @@
 angular.module("appName", [])
 	.controller("nameOfController", function() {
 		var controllerScope = this;
-		controllerScope.messages = "";
+		controllerScope.message = "";
+
+        controllerScope.save = function() {
+            alert("Note Saved");
+        };
+        controllerScope.clear = function() {
+            controllerScope.message = "";
+        };
 
 
 	});
