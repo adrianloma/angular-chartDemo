@@ -5,25 +5,15 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
 	<link rel="stylesheet" href="angular-chart.js/angular-chart.css">
 	<script type="text/javascript" src="angular-chart.js/angular-chart.js"></script>
-
 	<script src="appName.js"></script>
 
 </head>
 
-<body ng-controller="nameOfController as myController">
-
-	<textarea ng-model="myController.message" cols="80" rows="20"></textarea>
-
-
-    <p align="center">
-		<button ng-click="myController.save()">Save</button>
-		<button ng-click="myController.clear()">Clear</button>
-    </p>
-
-      <ul>
-        <li ng-repeat="singleMessage in myController.messages">
-          {{singleMessage.text}}
-        </li>
-      </ul>
+<body >
+	<div ng-controller="nameOfController as myController" style="width:60%">
+		<canvas id="pie" class="chart chart-pie"
+		  chart-data="myController.data" chart-labels="myController.labels">
+		</canvas> 
+	</div>
 </body>
 </html>

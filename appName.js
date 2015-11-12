@@ -1,17 +1,8 @@
-angular.module("appName", [])
+angular.module("appName", ["chart.js"])
 	.controller("nameOfController", function() {
 		var controllerScope = this;
-		controllerScope.message = "";
 
-		controllerScope.messages = [];
-
-        controllerScope.save = function() {
-            controllerScope.messages.push( {text:controllerScope.message});
-            controllerScope.clear();
-        };
-        controllerScope.clear = function() {
-            controllerScope.message = "";
-        };
-
+		controllerScope.labels = ["Download Sales", "In-Store Sales", "Mail-Order Sales"];
+		controllerScope.data = [300, 500, 100];
 
 	});
