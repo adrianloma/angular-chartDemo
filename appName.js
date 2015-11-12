@@ -1,4 +1,7 @@
 angular.module("appName", [])
-    .controller("nameOfController", function($scope) {
-    	
-    });
+	.controller("nameOfController", function() {
+		var controllerScope = this;
+		controllerScope.messages = "";
+
+
+	});
